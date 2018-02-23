@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{amsmath} % Display math equations
+\usepackage{amssymb} % Display math symbol like R, Z
+
+% Margins
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in 
+
+\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\hmwkAuthorName} % Top left header
+\chead{\hmwkClass\ (\hmwkClassInstructor\ \hmwkClassTime): \hmwkTitle} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+   
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\hmwkTitle}{Assignment\ \#1} % Assignment title
+\newcommand{\hmwkDueDate}{January\ 23,\ 2018} % Due date
+\newcommand{\hmwkClass}{CS\ 5751} % Course/class
+\newcommand{\hmwkClassTime}{11:00am} % Class/lecture time
+\newcommand{\hmwkClassInstructor}{Eleazar} % Teacher/lecturer last name
+\newcommand{\hmwkAuthorName}{Nam Phung} % Your name
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+%\tableofcontents
+%\newpage
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\begin{homeworkProblem}[Exercise \#\arabic{homeworkProblemCounter}] % Custom section title
+% Question
+Consider the function $z=f(x,y)=x^2+y^2$. Now, write a pdf file named yourlastname\_hw1\_q2.pdf containing the answers to the following tasks:
+
+%--------------------------------------------
+
+\begin{homeworkSection}{(1)} % Section within problem
+	% Question
+	Compute the gradient $\nabla f(x,y)$. For this task you need to explain every step of your computation of the gradient. You cannot simply write the vector.\vspace{10pt} 
+	
+	\problemAnswer{ % Answer
+		We have $f(x,y)=x^2+y^2$. Since $\frac{\partial f}{\partial x}=2x$ and $\frac{\partial f}{\partial y}=2y$, we will have the following:
+		\begin{align*}
+		\nabla f(x,y)
+		= \Big(\frac{\partial f}{\partial x}, \frac{\partial f}{\partial y}\Big)
+		= (2x,2y)
+		\end{align*}
+	
+	Therefore, the gradient of $f(x,y)=(2x,2y)$.
+}
+\end{homeworkSection}
+
+%--------------------------------------------
+
+\begin{homeworkSection}{(2)} % Section within problem
+	% Question
+	Compute the Hessian of $\nabla f(x,y)$. For this task you need to explain every step of your computation of the Hessian. You cannot simply write it the matrix.\vspace{10pt}
+	
+	\problemAnswer{ % Answer
+		We have the function $f(x,y)=x^2+y^2$. In part 1, we know that $\frac{\partial f}{\partial x}=2x$ and $\frac{\partial f}{\partial y}=2y$.  Since $f:\mathbb{R}^2\rightarrow \mathbb{R}$, the Hessian matrix of $f$ is a square matrix with a dimension $2\times 2$, that is:
+		
+		\begin{align*}
+		\nabla ^2 f &=
+		\begin{bmatrix}
+			\frac{\partial ^2 f}{\partial x^2} & \frac{\partial ^2 f}{\partial xy} \\
+			\frac{\partial ^2 f}{\partial yx} & \frac{\partial ^2 f}{\partial y^2} \\ 
+		\end{bmatrix} \\
+		&= 
+		\begin{bmatrix}
+		\frac{\partial}{\partial x}2x & \frac{\partial}{\partial y}2x \\
+		\frac{\partial}{\partial x}2y & \frac{\partial}{\partial y}2y \\ 
+		\end{bmatrix} \\
+		&= 
+		\begin{bmatrix}
+		2 & 0 \\
+		0 & 2 \\
+		\end{bmatrix}
+		\end{align*}
+	}
+\end{homeworkSection}
+
+%--------------------------------------------
+
+\begin{homeworkSection}{(3)} % Section within problem
+	% Question
+	Write the second order Taylor series expansion for $f(x,y)$ around $x_0=0$. Explain your answer.\vspace{10pt} 
+	
+	\problemAnswer{ % Answer
+		We have the Taylor series expansion around $x_0=0$ for $f:\mathbb{R}^2\rightarrow \mathbb{R}$ as follows:
+		\begin{align*}
+			f(x_0+h)=f(x_0)+\Big(\nabla f(x_0)\Big)h + \frac{1}{2} \Big(h^T\Big) \Big[\Big(\nabla^2f(x_0)\Big) h\Big]
+		\end{align*}
+		We know that $x_0$ and $h$ are vectors with the following values: $x_0=\begin{bmatrix}0 \\ 0\end{bmatrix}$	and $h=\begin{bmatrix}h_0 \\ h_1\end{bmatrix}$. From section 1 and 2 above, we also know that the gradient $\nabla f=(2x,2y)$ and the Hessian of $f$ is $\nabla^2 f=\begin{bmatrix}
+		2 & 0 \\
+		0 & 2 \\
+		\end{bmatrix}$. Therefore, the Taylor series expansion can be written as follows:
+		\begin{align*}
+			f(x_0+h) &= f(x_0)+\Big(\nabla f(x_0)\Big)h + \Big(\frac{1}{2}\Big) \big(h^T\big) \Bigg[\Big(\nabla^2f(x_0)\Big) \big(h\big)\Bigg] \\
+			&= f(0,0)+\Big(\nabla f(0,0)\Big)h + \Big(\frac{1}{2}\Big) \big(h^T\big) \Bigg[\Big(\nabla^2f(0,0)\Big) \big(h\big)\Bigg] \\
+			&= 0 + \begin{bmatrix}0 & 0\end{bmatrix} \begin{bmatrix}h_0 \\ h_1\end{bmatrix} + \frac{1}{2} \begin{bmatrix}h_0 & h_1\end{bmatrix} \Bigg(\begin{bmatrix}
+			2 & 0 \\
+			0 & 2 \\
+			\end{bmatrix} \begin{bmatrix}h_0 \\ h_1\end{bmatrix}\Bigg) \\
+			&= \begin{bmatrix}
+			\frac{h_0}{2} & \frac{h_1}{2} 
+			\end{bmatrix}
+			\begin{bmatrix}
+			2h_0 \\ 2h_1
+			\end{bmatrix} \\
+			&= h^2_0 + h^2_1
+		\end{align*}
+	}
+\end{homeworkSection}
+
+%--------------------------------------------
+
+\begin{homeworkSection}{(4)} % Section within problem
+	% Question
+	Consider Figure 2, which is a plot of $f(x,y)$. What do you observe in this plot? In which direction does the gradient point? Why does this happen?\vspace{10pt} 
+	
+	\problemAnswer{ % Answer
+		The plot display a surface of a convex function $f(x,y)=x^2+y^2$. The color of the surface indicates the value $z$ ranging from blue (small value) to red (big value). The arrows on the z-surface is vector field indicating the gradient of $f(x,y)$ at different coordinates $(x,y)$. At the origin $(x,y)=(0,0)$ is the global minimum of this convex function. The gradient of this function is diverging from the origin $(0,0)$. This is because this surface has only 1 minimum at $(x,y)=(0,0)$, as we move further away from this point, the slope of the surface becomes higher, which means the gradient will increase.
+		}
+\end{homeworkSection}
+
+%--------------------------------------------
+
+\end{homeworkProblem}
+
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
